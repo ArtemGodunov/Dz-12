@@ -76,7 +76,6 @@
     left: 0;
     line-height: 2.25em;
     position: absolute;
-    text-align: right;
     top: 1em;
     width: 100%;
     z-index: 10001;
@@ -87,14 +86,14 @@
       display: inline-block;
       font-weight: 400;
       height: inherit;
-      left: 10px;
       line-height: inherit;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: 0;
       font-size: 1em;
   }
+
+	#header .inner {
+		display: flex;
+		justify-content: space-between;
+	}
 
   #header a {
     transition: color 0.2s ease-in-out;
@@ -130,7 +129,7 @@
     border-top: 2px solid rgba(255, 255, 255, 0.2);
     position: relative;
     z-index: 10005;
-    padding-top: 8em;
+    padding-top: 3em;
   }
 
   #banner p {
@@ -267,3 +266,42 @@ section.wrapper, article.wrapper {
 		.icon > .label {
 			display: none;
 		}
+
+
+@media (min-width: 1400px) {
+		.inner {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+
+}
+
+@media (max-width: 786px) {
+	#banner h1 {
+		font-size: 2rem;
+	}
+
+	.flex {
+		flex-flow: column;
+	}
+
+	#three article {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+}
+ @media (max-width: 786px) {
+   #banner h1 {
+     font-size: 2rem;
+   }
+
+   .flex {
+     flex-flow: column;
+   }
+
+   #three article {
+     width: 100%;
+     margin-bottom: 50px;
+   }
+ }
